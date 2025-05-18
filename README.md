@@ -1,6 +1,6 @@
 # 🚗 The Price Is Right: Car Auction Edition
 
-This project is a Flask-based web game developed as a homework assignment for **STATS404 – Statistical Computing** at UCLA.
+This project is a Flask-based web game developed as a homework assignment for **STATS404 – Statistical Programming and Computing** at UCLA.
 
 ---
 
