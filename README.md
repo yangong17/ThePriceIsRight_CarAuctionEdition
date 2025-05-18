@@ -2,28 +2,42 @@
 
 This project is a Flask-based web game developed as a homework assignment for **STATS404 – Statistical Computing** at UCLA.
 
-Players are presented with 5 rare and expensive cars sold at auction. For each car, players are shown:
+---
+
+## 🎯 Assignment Objective
+
+The objective of this assignment was to demonstrate the ability to:
+- **Scrape real-world data from Wikipedia**
+- **Clean and structure it programmatically**
+- **Incorporate the data into an interactive Flask application**
+
+---
+
+## 🕹️ About the Game
+
+Players are presented with 5 rare and expensive cars sold at public auction. For each car, players see:
 - The **model year**
 - The **car name**
 - The **date it was sold**
-- A **photo** scraped live from Wikipedia
+- A **live image** scraped from Wikipedia
 
-The objective is to guess the car's **original auction price** from 5 options. After each round, players receive immediate feedback, and a detailed summary is shown at the end of the game.
+Players must guess the car’s **original auction price** from 5 options. Immediate feedback is provided, and a final summary is displayed at the end.
 
 ---
 
-## 🔧 Features
+## ✅ Features
 
-- ✅ 5 randomly selected cars per game (no duplicate titles)
-- 🚀 Multithreaded image scraping for faster load time
+- 🔁 5 randomly selected, non-duplicate cars each game
+- ⚡ Multithreaded scraping for faster image loading
 - 🟢 Highlights correct/incorrect answers after each guess
-- 📊 End-of-game summary of guesses and results
-- 🖼️ Real car photos pulled directly from Wikipedia
-- 🧠 Clean and interactive design using Flask + Jinja
+- 📊 Final summary showing all responses and results
+- 🧠 Clean UI using Flask and Jinja2 templates
 
 ---
 
-## 🗂️ Folder Structure
+## 📁 Folder Structure
+
+
 ```
 ThePriceIsRight_CarAuctionEdition/
 ├── app.py # Flask app logic and game flow
