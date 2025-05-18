@@ -27,11 +27,11 @@ Players must guess the car’s **original auction price** from 5 options. Immedi
 
 ## ✅ Features
 
-- 🔁 5 randomly selected, non-duplicate cars each game
-- ⚡ Multithreaded scraping for faster image loading
-- 🟢 Highlights correct/incorrect answers after each guess
-- 📊 Final summary showing all responses and results
-- 🧠 Clean UI using Flask and Jinja2 templates
+-  5 randomly selected, non-duplicate cars each game
+-  Multithreaded scraping for faster image loading
+-  Highlights correct/incorrect answers after each guess
+-  Final summary showing all responses and results
+-  Clean UI using Flask and Jinja2 templates
 
 ---
 
