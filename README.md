@@ -83,23 +83,3 @@ All data is scraped live from:
 
 ---
 
-## 📘 Academic Context
-
-- **Course:** STATS404 – Statistical Computing  
-- **Instructor:** [Insert instructor name if needed]  
-- **Objective:** Practice Python web development, real-time data integration, and interactive interfaces using Flask
-
----
-
-## 💡 Potential Extensions
-
-- Add a countdown timer or scoring system
-- Deploy the game online (e.g., with PythonAnywhere, Render, or Heroku)
-- Track high scores in a leaderboard
-- Export results to CSV for analysis
-
----
-
-## 📄 License
-
-This project is for educational use only.
