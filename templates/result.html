@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Summary</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+    <h1>Game Summary</h1>
+    {% for ans in answers %}
+        <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+            <p><strong>{{ ans.model_year }} {{ ans.car }}</strong> (Sold on {{ ans.date }})</p>
+            <img src="{{ ans.image_url }}" style="max-height:150px;"><br>
+            <p>Your guess: <strong>${{ "{:,}".format(ans.guess) }}</strong></p>
+            <p>Correct price: <strong>${{ "{:,}".format(ans.correct) }}</strong></p>
+            {% if ans.correct_answered %}
+                <p style="color:green">
+                    ✅ Correct!
+                </p>
+            {% else %}
+                <p style="color:red">
+                    ❌ Incorrect
+                </p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <a href="/">Play Again</a>
+</body>
+</html>

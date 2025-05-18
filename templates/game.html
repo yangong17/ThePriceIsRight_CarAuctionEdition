@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Price</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        img { max-height: 300px; }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Round {{ round }} of {{ total }}</h2>
+    <p><strong>Date Sold:</strong> {{ date }}</p>
+    <p><strong>Model Year:</strong> {{ model_year }}</p>
+    <p><strong>Car:</strong> {{ car }}</p>
+    <img src="{{ image_url }}"><br><br>
+
+    <form method="POST">
+        {% for price in options %}
+            <button type="submit" name="guess" value="{{ price }}"
+                {% if reveal and price == correct_price %}
+                    style="background-color: lightgreen;"
+                {% elif reveal and price == guess and price != correct_price %}
+                    style="background-color: lightcoral;"
+                {% endif %}>
+                $ {{ "{:,}".format(price) }}
+            </button><br>
+        {% endfor %}
+        <input type="hidden" name="correct_price" value="{{ correct_price }}">
+        <input type="hidden" name="car" value="{{ car }}">
+        <input type="hidden" name="date" value="{{ date }}">
+        <input type="hidden" name="model_year" value="{{ model_year }}">
+        <input type="hidden" name="image_url" value="{{ image_url }}">
+    </form>
+
+    {% if reveal %}
+        <br><a href="/game">Next →</a>
+    {% endif %}
+</body>
+</html>

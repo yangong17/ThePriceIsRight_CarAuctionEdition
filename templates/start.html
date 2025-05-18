@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Auction Price Guessing Game</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 60px; }
+        .container { max-width: 600px; margin: auto; }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Car Auction Price Game!</h1>
+        <p>In this game, you will be shown 5 randomly selected cars that were sold at high-profile auctions.</p>
+        <p>For each car, you'll see the model year, name, and the date it was sold, along with a photo.</p>
+        <p>Your task is to guess the <strong>original auction price</strong> of the car from 5 options.</p>
+        <p>At the end, you'll get a full summary of your performance.</p>
+        <form action="/game" method="GET">
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>
