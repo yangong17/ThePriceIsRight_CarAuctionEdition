@@ -10,6 +10,17 @@
             padding: 10px 20px;
             font-size: 16px;
         }
+        .feedback {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -30,14 +41,26 @@
                 $ {{ "{:,}".format(price) }}
             </button><br>
         {% endfor %}
+
+        <!-- Hidden fields for POST -->
         <input type="hidden" name="correct_price" value="{{ correct_price }}">
         <input type="hidden" name="car" value="{{ car }}">
         <input type="hidden" name="date" value="{{ date }}">
         <input type="hidden" name="model_year" value="{{ model_year }}">
         <input type="hidden" name="image_url" value="{{ image_url }}">
+        {% for price in options %}
+            <input type="hidden" name="options" value="{{ price }}">
+        {% endfor %}
     </form>
 
     {% if reveal %}
+        <div class="feedback {% if guess == correct_price %}correct{% else %}incorrect{% endif %}">
+            {% if guess == correct_price %}
+                ✅ Correct!
+            {% else %}
+                ❌ Incorrect — the correct price was ${{ "{:,}".format(correct_price) }}
+            {% endif %}
+        </div>
         <br><a href="/game">Next →</a>
     {% endif %}
 </body>

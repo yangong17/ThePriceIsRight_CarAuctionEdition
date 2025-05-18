@@ -10,7 +10,7 @@ def loading():
     session["cars"] = scrape_expensive_cars_with_images(limit=5)
     session["round"] = 0
     session["answers"] = []
-    return render_template("start.html")  # changed from loading.html
+    return render_template("start.html")
 
 
 @app.route("/game", methods=["GET", "POST"])
